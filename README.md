@@ -1,1 +1,1 @@
-Example project for testing in Radix.
+# Example project for testing in Radix.
