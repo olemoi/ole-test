@@ -1,0 +1,20 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: ole-test
+spec:
+  environments:
+    - name: qa
+      build:
+        from: master
+  components:
+    - name: app
+      src: "."
+      publicPort: http
+      ports:
+       - name: http
+         port: 8000
+      public: true
+      environmentConfig:
+        - environment: qa
+          replicas: 1
