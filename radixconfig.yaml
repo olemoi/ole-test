@@ -7,6 +7,9 @@ spec:
     - name: qa
       build:
         from: master
+    - name: prod
+      build:
+        from: release
   components:
     - name: app
       src: "."
@@ -17,4 +20,6 @@ spec:
       public: true
       environmentConfig:
         - environment: qa
+          replicas: 1
+        - environment: prod
           replicas: 1
