@@ -9,7 +9,7 @@ spec:
         from: master
     - name: prod
       build:
-        from: release
+        from: master
   components:
     - name: app
       src: "."
