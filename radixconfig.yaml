@@ -18,5 +18,3 @@ spec:
       environmentConfig:
         - environment: qa
           replicas: 1
-        - environment: prod
-          replicas: 1
