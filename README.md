@@ -1,4 +1,4 @@
 # Example project for testing in Radix.
 
 
-Test
+Test-app
