@@ -4,7 +4,7 @@ metadata:
   name: ole-TEST
 spec:
   environments:
-    - name: test
+    - name: qa
       build:
         from: master
     - name: prod
@@ -17,5 +17,5 @@ spec:
          port: 8000
       public: true
       environmentConfig:
-        - environment: test
+        - environment: qa
           replicas: 1
