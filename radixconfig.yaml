@@ -4,7 +4,7 @@ metadata:
   name: ole-TEST
 spec:
   environments:
-    - name: qa
+    - name: test
       build:
         from: master
     - name: prod
