@@ -1,9 +1,11 @@
 # Using flask to make an api 
 # import necessary libraries and functions 
 from flask import Flask, jsonify, request 
+import os
+
   
 # creating a Flask app 
-app = Flask(__name__) 
+app = Flask(__name__)
   
 # on the terminal type: curl http://127.0.0.1:5000/ 
 # returns hello world when we use GET. 
@@ -12,7 +14,7 @@ app = Flask(__name__)
 def home(): 
     if(request.method == 'GET'): 
   
-        data = "hello world"
+        data = os.environ['WHITELIST']
         return jsonify({'data': data}) 
   
   
@@ -29,4 +31,4 @@ def disp(num):
 # driver function 
 if __name__ == '__main__': 
   
-    app.run(host=0.0.0.0) 
+    app.run(port=80) 

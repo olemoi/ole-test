@@ -10,11 +10,13 @@ spec:
     - name: prod
   components:
     - name: app
+      secrets:
+        - WHITELIST
       src: "."
       publicPort: http
       ports:
        - name: http
-         port: 8000
+         port: 80
       public: true
       environmentConfig:
         - environment: qa
