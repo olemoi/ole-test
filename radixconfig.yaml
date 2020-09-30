@@ -8,10 +8,11 @@ spec:
       build:
         from: master
   components:
-    - name: app
+    - name: server
       secrets:
         - WHITELIST
       src: "."
+      dockerfileName: "Dockerfile"
       publicPort: http
       ports:
        - name: http
