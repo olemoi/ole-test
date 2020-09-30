@@ -7,7 +7,6 @@ spec:
     - name: qa
       build:
         from: master
-    - name: prod
   components:
     - name: app
       secrets:
