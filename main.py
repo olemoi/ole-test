@@ -14,8 +14,7 @@ app = Flask(__name__)
 def home(): 
     if(request.method == 'GET'): 
   
-        data = os.environ['WHITELIST']
-        return jsonify({'data': data}) 
+        return "Hello World!"
   
   
 # A simple function to calculate the square of a number 
