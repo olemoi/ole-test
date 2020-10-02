@@ -9,8 +9,6 @@ spec:
         from: master
   components:
     - name: server
-      secrets:
-        - WHITELIST
       src: "."
       dockerfileName: "Dockerfile"
       publicPort: http
