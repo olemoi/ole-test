@@ -10,8 +10,6 @@ spec:
     - name: prod
   components:
     - name: app
-      secrets:
-        - WHITELIST
       src: "."
       publicPort: http
       ports:
