@@ -19,3 +19,10 @@ spec:
       environmentConfig:
         - environment: qa
           replicas: 1
+          resources:
+            requests:
+              memory: "40Mi"
+              cpu: "10m"
+            limits:
+              memory: "50Mi"
+              cpu: "20m"
