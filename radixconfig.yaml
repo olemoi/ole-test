@@ -8,63 +8,9 @@ spec:
       build:
         from: master
   components:
-    - name: first-server
+    - name: server
       src: "."
       dockerfileName: "./api/Dockerfile"
-      publicPort: http
-      ports:
-       - name: http
-         port: 8000
-      public: true
-      environmentConfig:
-        - environment: qa
-          replicas: 1
-          resources:
-            requests:
-              memory: "40Mi"
-              cpu: "10m"
-            limits:
-              memory: "50Mi"
-              cpu: "20m"
-    - name: second-server
-      src: "."
-      dockerfileName: "./another-api/Dockerfile"
-      publicPort: http
-      ports:
-       - name: http
-         port: 8000
-      public: true
-      environmentConfig:
-        - environment: qa
-          replicas: 1
-          resources:
-            requests:
-              memory: "40Mi"
-              cpu: "10m"
-            limits:
-              memory: "50Mi"
-              cpu: "20m"
-    - name: frontend
-      src: "."
-      dockerfileName: "./third-api/Dockerfile"
-      publicPort: http
-      ports:
-       - name: http
-         port: 8000
-      public: true
-      environmentConfig:
-        - environment: qa
-          replicas: 1
-          resources:
-            requests:
-              memory: "40Mi"
-              cpu: "10m"
-            limits:
-              memory: "50Mi"
-              cpu: "20m"
-    - name: second-frontend
-      src: "."
-      dockerfileName: "./fourth-api/Dockerfile"
       publicPort: http
       ports:
        - name: http
