@@ -8,7 +8,7 @@ spec:
       build:
         from: master
   components:
-    - name: server
+    - name: first-server
       src: "."
       dockerfileName: "./api/Dockerfile"
       publicPort: http
@@ -26,7 +26,7 @@ spec:
             limits:
               memory: "50Mi"
               cpu: "20m"
-    - name: server-2
+    - name: second-server
       src: "."
       dockerfileName: "./another-api/Dockerfile"
       publicPort: http
