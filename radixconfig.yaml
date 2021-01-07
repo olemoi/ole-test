@@ -10,7 +10,7 @@ spec:
   components:
     - name: server
       src: "."
-      dockerfileName: "./api/Dockerfile"
+      dockerfileName: "Dockerfile"
       publicPort: http
       ports:
        - name: http
