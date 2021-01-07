@@ -14,7 +14,7 @@ app = Flask(__name__)
   
 @app.route('/', methods = ['GET']) 
 def home(): 
-    return jsonify({'data': "Hello World"}) 
+    return jsonify({'data': "Hello World, from the  main API"}) 
   
   
 # driver function 
