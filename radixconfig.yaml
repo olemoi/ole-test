@@ -44,7 +44,7 @@ spec:
             limits:
               memory: "50Mi"
               cpu: "20m"
-    - name: server
+    - name: frontend
       src: "."
       dockerfileName: "./third-api/Dockerfile"
       publicPort: http
@@ -62,7 +62,7 @@ spec:
             limits:
               memory: "50Mi"
               cpu: "20m"
-    - name: server
+    - name: second-frontend
       src: "."
       dockerfileName: "./fourth-api/Dockerfile"
       publicPort: http
