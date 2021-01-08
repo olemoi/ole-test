@@ -14,10 +14,11 @@ app = Flask(__name__)
   
 @app.route('/', methods = ['GET']) 
 def home(): 
+    print "This will not work"
     return jsonify({'data': "Hello World, from the  main API"}) 
   
   
 # driver function 
 if __name__ == '__main__': 
   
-    app.run(host="0.0.0.0", port=8001) 
+    app.run(host="0.0.0.0", port=8000) 

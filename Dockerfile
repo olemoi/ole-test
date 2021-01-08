@@ -3,5 +3,5 @@ WORKDIR /src/
 COPY . /src
 RUN pip3 install flask-restful
 
-EXPOSE 80
+EXPOSE 8000
 CMD ["python3", "main.py"]
