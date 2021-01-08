@@ -10,7 +10,6 @@ spec:
   components:
     - name: server
       src: "."
-      dockerfileName: "Dockerfile"
       publicPort: http
       ports:
        - name: http
@@ -29,7 +28,6 @@ spec:
   components:
     - name: test
       src: "./test"
-      dockerfileName: "./test/Dockerfile"
       ports:
        - name: http
          port: 8005
