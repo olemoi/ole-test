@@ -26,3 +26,21 @@ spec:
             limits:
               memory: "50Mi"
               cpu: "20m"
+  components:
+    - name: test
+      src: "./test"
+      dockerfileName: "./test/Dockerfile"
+      ports:
+       - name: http
+         port: 8005
+      public: false
+      environmentConfig:
+        - environment: qa
+          replicas: 1
+          resources:
+            requests:
+              memory: "40Mi"
+              cpu: "10m"
+            limits:
+              memory: "50Mi"
+              cpu: "20m"
