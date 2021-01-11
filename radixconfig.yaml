@@ -31,7 +31,7 @@ spec:
       ports:
        - name: http
          port: 8005
-      public: false
+      public: true
       environmentConfig:
         - environment: qa
           replicas: 1
@@ -48,7 +48,7 @@ spec:
       ports:
        - name: http
          port: 8001
-      public: false
+      public: true
       environmentConfig:
         - environment: qa
           replicas: 1
@@ -65,7 +65,7 @@ spec:
       ports:
        - name: http
          port: 8002
-      public: false
+      public: true
       environmentConfig:
         - environment: qa
           replicas: 1
@@ -82,7 +82,7 @@ spec:
       ports:
        - name: http
          port: 8003
-      public: false
+      public: true
       environmentConfig:
         - environment: qa
           replicas: 1
