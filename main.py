@@ -14,7 +14,7 @@ app = Flask(__name__)
   
 @app.route('/', methods = ['GET']) 
 def home(): 
-    raise RuntimeError("Shutting down")
+    print "This will fail"
     return jsonify({'data': "Hello World, from the  main API"}) 
   
   
