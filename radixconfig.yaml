@@ -7,6 +7,9 @@ spec:
     - name: qa
       build:
         from: master
+    - name: test
+      build:
+        from: master
   components:
     - name: server
       src: "."
