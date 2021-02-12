@@ -7,10 +7,6 @@ spec:
     - name: qa
       build:
         from: master
-  environments:
-    - name: test
-      build:
-        from: master
   components:
     - name: server
       src: "."
@@ -21,6 +17,15 @@ spec:
       public: true
       environmentConfig:
         - environment: qa
+          replicas: 1
+          resources:
+            requests:
+              memory: "40Mi"
+              cpu: "10m"
+            limits:
+              memory: "50Mi"
+              cpu: "20m"
+        - environment: test
           replicas: 1
           resources:
             requests:
