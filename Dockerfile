@@ -3,8 +3,8 @@ WORKDIR /src/
 COPY . /src
 RUN pip3 install flask-restful
 
-RUN useradd -ms /bin/bash ole
-USER ole
+# RUN useradd -ms /bin/bash ole
+# USER ole
 
-EXPOSE 8000
+EXPOSE 80
 CMD ["python3", "main.py"]

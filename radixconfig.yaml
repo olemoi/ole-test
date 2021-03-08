@@ -7,28 +7,16 @@ spec:
     - name: qa
       build:
         from: master
-    - name: test
-      build:
-        from: master
   components:
     - name: server
       src: "."
       publicPort: http
       ports:
        - name: http
-         port: 8000
+         port: 80
       public: true
       environmentConfig:
         - environment: qa
-          replicas: 1
-          resources:
-            requests:
-              memory: "40Mi"
-              cpu: "10m"
-            limits:
-              memory: "50Mi"
-              cpu: "20m"
-        - environment: test
           replicas: 1
           resources:
             requests:
