@@ -17,6 +17,7 @@ spec:
       public: true
       environmentConfig:
         - environment: qa
+          runAsRoot: true
           replicas: 1
           resources:
             requests:
