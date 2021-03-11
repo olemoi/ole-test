@@ -12,7 +12,7 @@ spec:
         from: master
   components:
     - name: server
-      src: "."
+      src: .
       publicPort: http
       ports:
        - name: http
@@ -29,14 +29,6 @@ spec:
             limits:
               memory: "50Mi"
               cpu: "20m"
-    - name: server2
-      src: "."
-      publicPort: http
-      ports:
-       - name: http
-         port: 8000
-      public: true
-      environmentConfig:
         - environment: test
           runAsRoot: false
           replicas: 1
