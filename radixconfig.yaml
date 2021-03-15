@@ -20,7 +20,7 @@ spec:
       public: true
       environmentConfig:
         - environment: qa
-          runAsRoot: true
+          runAsNonRoot: false
           replicas: 1
           resources:
             requests:
@@ -30,7 +30,7 @@ spec:
               memory: "50Mi"
               cpu: "20m"
         - environment: test
-          runAsRoot: false
+          runAsNonRoot: true
           replicas: 1
           resources:
             requests:
