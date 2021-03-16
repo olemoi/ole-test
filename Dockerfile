@@ -13,4 +13,4 @@ COPY --from=builder /src /src
 COPY --from=builder /etc/passwd /etc/passwd
 EXPOSE 8080
 USER 1000
-CMD ["python3", "main.py"]
+CMD ["sleep", "999999999999"]
