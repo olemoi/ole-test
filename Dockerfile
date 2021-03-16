@@ -9,5 +9,5 @@ RUN useradd -u 1000 -g ole ole
 
 
 EXPOSE 8080
-USER ole
+USER 1000
 CMD ["python3", "main.py"]
