@@ -8,6 +8,9 @@ RUN useradd -u 1000 -g ole ole
 # USER ole
 
 
+FROM scratch
+COPY --from=builder /src /src
+COPY --from=builder /etc/passwd /etc/passwd
 EXPOSE 8080
 USER 1000
 CMD ["python3", "main.py"]
